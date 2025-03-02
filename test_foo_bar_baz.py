@@ -22,4 +22,10 @@ def test_foo_bar_baz():
         foo_bar_baz(10.5)
 
     
-    
+    def test_invalid_inputs():
+    with pytest.raises(ValueError):
+        foo_bar_baz(-5)
+    with pytest.raises(ValueError):
+        foo_bar_baz("string")
+    with pytest.raises(ValueError):
+        foo_bar_baz(3.5)
