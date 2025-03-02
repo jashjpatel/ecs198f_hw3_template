@@ -12,12 +12,32 @@ def test_foo_bar_baz():
     assert foo_bar_baz(0) == ""
     
     # invalid types
-    with pytest.raises(ValueError):
+    with pytest.raises(TypeError):
         foo_bar_baz("10")  
-    with pytest.raises(ValueError):
+    with pytest.raises(TypeError):
         foo_bar_baz(None)  
-    with pytest.raises(ValueError):
+    with pytest.raises(TypeError):
         foo_bar_baz([10])  
-    with pytest.raises(ValueError):
+    with pytest.raises(TypeError):
         foo_bar_baz(10.5)
+    with pytest.raises(TypeError):
+        foo_bar_baz(3.5)
+    with pytest.raises(TypeError):
+        foo_bar_baz("10")
+    with pytest.raises(TypeError):
+        foo_bar_baz(True)
+    with pytest.raises(TypeError):
+        foo_bar_baz(None)
+    with pytest.raises(TypeError):
+        foo_bar_baz([1, 2, 3])
+    with pytest.raises(TypeError):
+        foo_bar_baz((3, 5, 15))
+    with pytest.raises(TypeError):
+        foo_bar_baz({"n": 10})
+    with pytest.raises(TypeError):
+        foo_bar_baz({3, 5, 15})
+    with pytest.raises(TypeError):
+        foo_bar_baz(b'5')
+    with pytest.raises(TypeError):
+        foo_bar_baz(2 + 3j)
 
