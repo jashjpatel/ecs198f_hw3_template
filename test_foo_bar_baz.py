@@ -37,4 +37,16 @@ def test_foo_bar_baz():
         foo_bar_baz(b'5')
     with pytest.raises(TypeError):
         foo_bar_baz(2 + 3j)
-
+    with pytest.raises(TypeError):
+        foo_bar_baz(1e-3)
+    with pytest.raises(TypeError):
+        foo_bar_baz(1.5j)
+    with pytest.raises(TypeError):
+        foo_bar_baz(b"10")
+    with pytest.raises(TypeError):
+        foo_bar_baz(memoryview(b"10"))
+    with pytest.raises(TypeError):
+        foo_bar_baz(bytearray(10))
+        # check for control characters
+ 
+    
