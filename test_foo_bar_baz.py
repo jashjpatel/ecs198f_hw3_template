@@ -1,7 +1,8 @@
 import pytest
-from foo_bar_baz import foo_bar_baz
+
 
 def test_foo_bar_baz():
+    from foo_bar_baz import foo_bar_baz
     assert foo_bar_baz(1) == "1"
     assert foo_bar_baz(3) == "1 2 Foo"
     assert foo_bar_baz(5) == "1 2 Foo 4 Bar"
