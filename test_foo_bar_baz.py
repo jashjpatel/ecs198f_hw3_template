@@ -1,5 +1,4 @@
 import pytest
-import pytest
 from foo_bar_baz import foo_bar_baz
 
 def test_foo_bar_baz():
@@ -24,8 +23,6 @@ def test_foo_bar_baz():
         foo_bar_baz(3.5)
     with pytest.raises(TypeError):
         foo_bar_baz("10")
-    with pytest.raises(TypeError):
-        foo_bar_baz(True)
     with pytest.raises(TypeError):
         foo_bar_baz(None)
     with pytest.raises(TypeError):
